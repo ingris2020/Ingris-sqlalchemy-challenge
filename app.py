@@ -8,13 +8,13 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 
-######Create an app#####
+###### app #####
 app = Flask(__name__)
 
 ####Database Setup#####
 engine = create_engine("sqlite:///hawaii.sqlite")
 
-# Create our session link from Python to the DB
+# session link from Python to the DB#
 session = Session(engine)
 
 Base = automap_base()
